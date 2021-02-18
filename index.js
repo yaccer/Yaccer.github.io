@@ -4,6 +4,8 @@ const hoursValue = document.getElementById("hours");
 const minutesValue = document.getElementById("minutes");
 const secondsValue = document.getElementById("seconds");
 
+const sound = document.getElementById("timer-end");
+
 // get current value of element
 const getValue = (element) => (
   parseInt(element.textContent.trim())
@@ -163,7 +165,7 @@ startBtn.addEventListener("click", () => {
   timeout = setTimeout(() => {
     clearInterval(countdown);
     countdown = null;
-    countdownContainer.style.animation = "blink 500ms ease-in-out infinite";
+    countdownContainer.style.animation = "blink 500ms ease-in-out infinite", sound.play();
 
     setTimeout(() => {
       countdownContainer.style.animation = "";
@@ -188,7 +190,7 @@ clearBtn.addEventListener("click", () => {
     timeout = null;
   }
 
-  countdownContainer.style.animation = "";
+  countdownContainer.style.animation = "", sound.pause();
 
   const spanTag = document.createElement("span");
   spanTag.textContent = 0;
@@ -206,3 +208,4 @@ clearBtn.addEventListener("click", () => {
   secondsValue.appendChild(spanTag.cloneNode(true));
   secondsValue.appendChild(spanTag.cloneNode(true));
 });
+
