@@ -1,0 +1,156 @@
+@keyframes blink {
+  0% {
+    border-color: #fff;
+    width: 500px;
+  }
+  50% {
+    border-color: red;
+    width: 490px;
+  }
+  100% {
+    border-color: #fff;
+    width: 500px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  font-family: "JetBrains Mono";
+  font-size: 24px;
+  padding: 5em;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+#countdown {
+  margin: auto;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 1em .5em;
+  width: 500px;
+  display: grid;
+  gap: .6em 0;
+  align-items: center;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-areas:
+    "hours sep1 minutes sep2 seconds"
+    "buttons buttons buttons buttons buttons";
+  text-align: center;
+}
+
+.colonSep1 {
+  grid-area: sep1;
+  font-size: 32px;
+}
+
+.colonSep2 {
+  grid-area: sep2;
+  font-size: 32px;
+}
+
+h4 {
+  margin-bottom: 1em;
+}
+
+.hours {
+  grid-area: hours;
+}
+
+.minutes {
+  grid-area: minutes;
+}
+
+.seconds {
+  grid-area: seconds;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+p span {
+  background: #fff;
+  color: #000;
+  padding: 10px 15px;
+  font-size: 32px;
+  border-radius: 15px;
+}
+
+.arrows {
+  margin-top: .5em;
+  font-size: 25px;
+  user-select: none;
+}
+
+.arrows i {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.arrows i:hover {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "clear sep stop start";
+  gap: 1em;
+  grid-area: buttons;
+  margin: 0 .7em;
+}
+
+button {
+  font-family: "JetBrains Mono";
+  font-size: 19px;
+  padding: 5px 10px;
+  background: #000;
+  color: #eee;
+  border: solid 3px #eee;
+  border-radius: 10px;
+  outline: none;
+  transition: 500ms ease-in-out;
+  transition-property: background, text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+button i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+button.clear {
+  grid-area: clear;
+}
+
+button.stop {
+  grid-area: stop;
+}
+button.start {
+  grid-area: start;
+}

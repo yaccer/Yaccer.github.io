@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Countdown Timer Alpha V1</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>Countdown</h1>
+		<div id="countdown">
+			<div class="hours">
+				<h4>HRS</h4>
+				<p id="hours">
+					<span>0</span><span>0</span>
+				</p>
+				<div class="arrows">
+					<i id="decHours" class="fas fa-angle-down"></i>
+					<i id="incHours" class="fas fa-angle-up"></i>
+				</div>
+			</div>
+			<div class="colonSep1">:</div>
+			<div class="minutes">
+				<h4>MINS</h4>
+				<p id="minutes">
+					<span>0</span><span>0</span>
+				</p>
+				<div class="arrows">
+					<i id="decMins" class="fas fa-angle-down"></i>
+					<i id="incMins" class="fas fa-angle-up"></i>
+				</div>
+			</div>
+			<div class="colonSep2">:</div>
+			<div class="seconds">
+				<h4>SECS</h4>
+				<p id="seconds">
+					<span>0</span><span>0</span>
+				</p>
+				<div class="arrows">
+					<i id ="decSecs" class="fas fa-angle-down"></i>
+					<i id="incSecs" class="fas fa-angle-up"></i>
+				</div>
+			</div>
+			<div class="buttons">
+				<button id="clearBtn" class="clear">
+					<i class="fas fa-dumpster"></i>
+					CLEAR
+				</button>
+				<button id="stopBtn" class="stop">
+					<i class="fas fa-stop-circle"></i>
+					STOP
+				</button>
+				<button id="startBtn" class="start">
+					<i class="fas fa-play-circle"></i>
+					START
+				</button>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
